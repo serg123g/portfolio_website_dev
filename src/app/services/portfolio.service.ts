@@ -18,7 +18,6 @@ export interface Developer {
   description: string;
   skills: string[];
   email: string;
-  linkedin: string;
   githubProfile: string;
 }
 
@@ -36,7 +35,6 @@ export class PortfolioService {
       description: 'Passionate developer specializing in creating innovative solutions using Java, Flutter, and JavaScript. I focus on building scalable applications and implementing new features that enhance user experience and drive business growth.',
       skills: ['Java', 'Flutter', 'JavaScript', 'Android Development', 'Angular', 'Node.js', 'Mobile Apps', 'API Development', 'Kotlin', 'XML'],
       email: 'sergio.projects.dev@gmail.com',
-      linkedin: 'https://www.linkedin.com/in/sergio-portugal-r/',
       githubProfile: 'https://github.com/serg123g'
     };
   }
