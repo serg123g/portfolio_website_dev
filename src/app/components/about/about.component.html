@@ -1,0 +1,15 @@
+<section id="about" class="section">
+  <div class="container">
+    <h2 class="section-title">About Me</h2>
+    <div class="about-content">
+      <div class="about-text">
+        <p>{{ developer.description }}</p>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-item" *ngFor="let skill of developer.skills">
+          <h4>{{ skill }}</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

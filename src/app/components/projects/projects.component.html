@@ -1,0 +1,24 @@
+<section id="projects" class="section projects-section">
+    <div class="container">
+      <h2 class="section-title">Featured Projects</h2>
+      <div class="projects-grid">
+        <div class="project-card" *ngFor="let project of projects">
+          <h3 class="project-title">{{ project.title }}</h3>
+          <p class="project-description">{{ project.description }}</p>
+          <div class="project-tech">
+            <span class="tech-tag" *ngFor="let tech of project.technologies">{{ tech }}</span>
+          </div>
+          <div class="project-links">
+            <a [href]="project.githubUrl" class="project-link" target="_blank" *ngIf="project.githubUrl">GitHub</a>
+            <a [href]="project.demoUrl" class="project-link" target="_blank" *ngIf="project.demoUrl">Live Demo</a>
+            <a [href]="project.downloadUrl" class="project-link download-link" target="_blank" *ngIf="project.downloadUrl">
+              <svg class="android-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.5511 0 .9993.4486.9993.9993.0001.5511-.4482.9997-.9993.9997m-11.046 0c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.5511 0 .9993.4486.9993.9993 0 .5511-.4482.9997-.9993.9997m11.4045-6.02l1.9973-3.4592a.416.416 0 00-.1521-.5976.416.416 0 00-.5976.1521L17.523 8.8502 17.523 8.8502c-1.3877-.7329-3.0147-1.1357-4.6826-1.1357s-3.2949.4028-4.6826 1.1357l-1.9973-3.4592a.416.416 0 00-.5976-.1521.416.416 0 00-.1521.5976L8.5189 9.3214C6.6162 10.4454 5.5 12.4147 5.5 14.6337v1.9912c0 .2758.2237.4995.4995.4995h15.001c.2758 0 .4995-.2237.4995-.4995v-1.9912c0-2.219-1.1162-4.1883-3.019-5.3123"/>
+              </svg>
+              Download for {{ project.platform }}
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
